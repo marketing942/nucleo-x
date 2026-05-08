@@ -15,14 +15,15 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 const LOGO_URL =
-  "https://raw.githubusercontent.com/marketing942/fotos-dos-bots/main/ChatGPT%20Image%206%20de%20mai.%20de%202026%2C%2021_01_25.png";
+  "https://raw.githubusercontent.com/marketing942/fotos-dos-bots/main/Design%20sem%20nome.png";
 
 export const metadata: Metadata = {
-  title: "Núcleo X — Onde os melhores assumem a missão.",
+  title: "Núcleo X — Fivecon · Onde os melhores assumem a missão.",
   description:
-    "Grupo interno exclusivo formado por especialistas e destaques da empresa. Alta performance, disciplina, liderança silenciosa e mentalidade de vitória.",
+    "Núcleo X · Fivecon. Grupo interno exclusivo formado por especialistas e destaques da empresa. Alta performance, disciplina, liderança silenciosa e mentalidade de vitória.",
   keywords: [
     "Núcleo X",
+    "Fivecon",
     "Elite",
     "Alta performance",
     "Liderança",
@@ -30,15 +31,15 @@ export const metadata: Metadata = {
     "Time",
   ],
   openGraph: {
-    title: "Núcleo X",
+    title: "Núcleo X · Fivecon",
     description:
-      "Onde os melhores assumem a missão. Um grupo interno exclusivo formado pelos especialistas e destaques da empresa.",
+      "Onde os melhores assumem a missão. Um grupo interno exclusivo da Fivecon formado pelos especialistas e destaques da empresa.",
     images: [LOGO_URL],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Núcleo X",
+    title: "Núcleo X · Fivecon",
     description: "Onde os melhores assumem a missão.",
     images: [LOGO_URL],
   },

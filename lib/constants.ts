@@ -1,5 +1,7 @@
 export const LOGO_URL =
-  "https://raw.githubusercontent.com/marketing942/fotos-dos-bots/main/ChatGPT%20Image%206%20de%20mai.%20de%202026%2C%2021_01_25.png";
+  "https://raw.githubusercontent.com/marketing942/fotos-dos-bots/main/Design%20sem%20nome.png";
+
+export const COMPANY = "Fivecon";
 
 export const NAV_LINKS = [
   { href: "#sobre", label: "O que é" },
