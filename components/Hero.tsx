@@ -1,5 +1,4 @@
 import { Logo } from "./Logo";
-import { COMPANY } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -16,7 +15,7 @@ export function Hero() {
         <div className="lg:col-span-7 animate-fade-up">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-white/60">
             <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-soft" />
-            {COMPANY} · Grupo interno exclusivo
+            Grupo interno · Exclusivo
           </div>
 
           <h1 className="font-display text-balance text-4xl font-semibold leading-[1.05] tracking-tightest text-white sm:text-5xl md:text-6xl lg:text-7xl">

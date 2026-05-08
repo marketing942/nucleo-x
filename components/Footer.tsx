@@ -1,5 +1,4 @@
 import { Logo } from "./Logo";
-import { COMPANY } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -12,7 +11,7 @@ export function Footer() {
               Núcleo X
             </div>
             <div className="text-[10px] uppercase tracking-[0.25em] text-white/30">
-              {COMPANY} · Unidade interna · Confidencial
+              Unidade interna · Confidencial
             </div>
           </div>
         </div>
@@ -23,7 +22,7 @@ export function Footer() {
         </p>
 
         <div className="text-[10px] uppercase tracking-[0.25em] text-white/30">
-          © {new Date().getFullYear()} · Núcleo X · {COMPANY}
+          © {new Date().getFullYear()} · Núcleo X
         </div>
       </div>
     </footer>

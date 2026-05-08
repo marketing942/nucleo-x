@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { COMPANY, NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/constants";
 
 export function Header() {
   return (
@@ -13,7 +13,7 @@ export function Header() {
               Núcleo X
             </span>
             <span className="mt-0.5 text-[10px] uppercase tracking-[0.25em] text-white/40">
-              {COMPANY} · Unidade interna
+              Unidade interna
             </span>
           </div>
         </Link>
