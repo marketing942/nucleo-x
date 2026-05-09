@@ -55,6 +55,11 @@ export function Hero() {
             </a>
           </div>
 
+          <p className="mt-6 max-w-md text-xs uppercase tracking-[0.2em] text-white/40">
+            Antes de entrar no Núcleo X, preencha o formulário de melhores
+            colaboradores no chat ao lado.
+          </p>
+
           <div className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/5 pt-6">
             <Stat label="Padrão" value="Elite" />
             <Stat label="Postura" value="Dono" />
