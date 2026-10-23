@@ -1,65 +1,31 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Oxanium, Rajdhani } from "next/font/google";
+import { Crosshair } from "@/components/crosshair";
 import "./globals.css";
-import { TypebotBubble } from "@/components/TypebotBubble";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space",
-  display: "swap",
-});
-
-const LOGO_URL =
-  "https://raw.githubusercontent.com/marketing942/fotos-dos-bots/main/Design%20sem%20nome.png";
+// Mesmas três fontes do site novo da CPPEM: Inter (corpo), Oxanium (títulos), Rajdhani (rótulos).
+const inter = Inter({ variable: "--font-body", subsets: ["latin"], display: "swap" });
+const oxanium = Oxanium({ variable: "--font-display", subsets: ["latin"], display: "swap" });
+const rajdhani = Rajdhani({ variable: "--font-ui", subsets: ["latin"], weight: ["500", "600", "700"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Núcleo X — Onde os melhores assumem a missão.",
-  description:
-    "Grupo interno exclusivo formado por especialistas e destaques da empresa. Alta performance, disciplina, liderança silenciosa e mentalidade de vitória.",
-  keywords: [
-    "Núcleo X",
-    "Elite",
-    "Alta performance",
-    "Liderança",
-    "Cultura",
-    "Time",
-  ],
+  title: "Núcleo X — Onde os melhores assumem a missão",
+  description: "Grupo interno da CPPEM formado pelos especialistas e destaques da empresa. Si vis pacem, para bellum.",
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Núcleo X",
-    description:
-      "Onde os melhores assumem a missão. Um grupo interno exclusivo formado pelos especialistas e destaques da empresa.",
-    images: [LOGO_URL],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Núcleo X",
     description: "Onde os melhores assumem a missão.",
-    images: [LOGO_URL],
-  },
-  icons: {
-    icon: LOGO_URL,
-    shortcut: LOGO_URL,
-    apple: LOGO_URL,
+    images: ["/logo-nucleo-x.png"],
+    type: "website",
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="font-sans bg-ink-950 text-white antialiased">
+    <html lang="pt-BR" className={`${inter.variable} ${oxanium.variable} ${rajdhani.variable}`}>
+      <body className="bg-bg font-sans text-ink antialiased">
         {children}
-        <TypebotBubble />
+        <Crosshair />
       </body>
     </html>
   );

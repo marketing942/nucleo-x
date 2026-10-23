@@ -1,29 +1,19 @@
+import { MOTTO } from "@/lib/constants";
 import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-ink-950 py-12">
-      <div className="container-x flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+    <footer className="border-t border-line bg-surface py-8">
+      <div className="container-x flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
         <div className="flex items-center gap-3">
-          <Logo size={32} />
+          <Logo size={32} className="ring-1 ring-gold/60" />
           <div>
-            <div className="font-display text-sm font-semibold text-white">
-              Núcleo X
-            </div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-white/30">
-              Unidade interna · Confidencial
-            </div>
+            <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-gold-pale">Núcleo X</p>
+            <p className="ui-label text-[10px] text-ink-muted">Uso interno · Confidencial</p>
           </div>
         </div>
-
-        <p className="max-w-md text-sm text-white/40">
-          Documento institucional para uso interno. O Núcleo X representa o
-          padrão. O padrão se mantém na ação.
-        </p>
-
-        <div className="text-[10px] uppercase tracking-[0.25em] text-white/30">
-          © {new Date().getFullYear()} · Núcleo X
-        </div>
+        <p className="ui-label text-xs text-gold-light">{MOTTO.join(" · ")}</p>
+        <p className="ui-label text-[10px] text-ink-muted">© {new Date().getFullYear()} CPPEM</p>
       </div>
     </footer>
   );

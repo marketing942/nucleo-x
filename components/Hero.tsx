@@ -1,101 +1,65 @@
 import { Logo } from "./Logo";
 
+const STATS = [
+  { label: "Padrão", value: "Elite" },
+  { label: "Postura", value: "Dono" },
+  { label: "Cultura", value: "Missão" },
+];
+
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="relative overflow-hidden border-b border-white/5"
-    >
-      {/* Backgrounds */}
-      <div className="pointer-events-none absolute inset-0 bg-radial-fade" />
-      <div className="pointer-events-none absolute inset-0 bg-grid-faint [background-size:60px_60px] opacity-40 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
+    <section id="top" className="relative overflow-hidden border-b border-line">
+      <div className="pointer-events-none absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_70%_40%,black,transparent_70%)]" />
+      <div className="pointer-events-none absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(175,146,86,0.16),transparent_65%)]" />
 
-      <div className="container-x relative grid grid-cols-1 items-center gap-16 py-24 md:py-32 lg:grid-cols-12 lg:gap-10">
-        {/* Texto */}
-        <div className="lg:col-span-7 animate-fade-up">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-white/60">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-soft" />
-            Grupo interno · Exclusivo
+      <div className="container-x relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:gap-8 lg:py-28">
+        <div className="animate-fade-up lg:col-span-7">
+          <div className="ui-label inline-flex items-center gap-2.5 rounded-md border border-line bg-gold/5 px-3 py-1.5 text-[11px] text-gold-light">
+            <span className="h-1.5 w-1.5 animate-blink rounded-full bg-gold-pale" />
+            Grupo interno · Acesso restrito
           </div>
 
-          <h1 className="font-display text-balance text-4xl font-semibold leading-[1.05] tracking-tightest text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Núcleo X:{" "}
-            <span className="block text-white/90">
-              onde os melhores
-            </span>
-            <span className="block">
-              assumem a <span className="text-accent">missão.</span>
+          <h1 className="mt-6 font-display text-[2.6rem] font-extrabold uppercase leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-[4.4rem]">
+            Onde os melhores
+            <span className="block bg-gradient-to-r from-gold-pale via-gold-light to-gold bg-clip-text pb-1 text-transparent">
+              assumem a missão.
             </span>
           </h1>
 
-          <p className="mt-8 max-w-xl text-balance text-base text-white/60 md:text-lg">
-            Um grupo interno exclusivo, formado por pessoas que não esperam o
-            problema crescer. Elas enxergam, assumem, resolvem e colocam o
-            negócio para frente.
+          <p className="mt-6 max-w-xl text-base text-ink-soft md:text-lg">
+            Não esperam o problema crescer. Enxergam, assumem, resolvem e colocam o negócio para frente.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#sobre"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink-950 transition-all hover:bg-white/90"
-            >
-              Conheça a missão
-              <span
-                aria-hidden
-                className="inline-block transition-transform group-hover:translate-x-1"
-              >
-                →
-              </span>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a href="#missao" className="gold-button">
+              Conheça a missão <span aria-hidden>→</span>
             </a>
-            <a
-              href="#pilares"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm text-white/80 transition-colors hover:border-white/40 hover:text-white"
-            >
+            <a href="#pilares" className="ghost-button">
               Ver pilares
             </a>
           </div>
 
-          <p className="mt-6 max-w-md text-xs uppercase tracking-[0.2em] text-white/40">
-            Antes de entrar no Núcleo X, preencha o formulário de melhores
-            colaboradores no chat ao lado.
-          </p>
-
-          <div className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/5 pt-6">
-            <Stat label="Padrão" value="Elite" />
-            <Stat label="Postura" value="Dono" />
-            <Stat label="Cultura" value="Missão" />
-          </div>
+          <dl className="mt-12 grid max-w-md grid-cols-3 gap-4 border-t border-line pt-6">
+            {STATS.map((stat) => (
+              <div key={stat.label}>
+                <dt className="ui-label text-[10px] text-ink-muted">{stat.label}</dt>
+                <dd className="mt-1.5 font-display text-xl font-bold uppercase text-gold-pale">{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
-        {/* Logo destaque */}
-        <div className="relative flex items-center justify-center lg:col-span-5">
-          <div className="relative aspect-square w-full max-w-[420px] animate-fade-in">
-            <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,rgba(200,16,46,0.25),transparent_60%)]" />
-            <div className="absolute inset-6 rounded-full border border-white/10" />
-            <div className="absolute inset-14 rounded-full border border-white/[0.06]" />
+        <div className="flex justify-center lg:col-span-5">
+          <div className="hud relative aspect-square w-full max-w-[400px] p-6 sm:p-8">
+            <i /><i /><i /><i />
+            <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(175,146,86,0.2),transparent_68%)]" />
+            <div className="animate-spin-slow absolute inset-3 rounded-full border border-dashed border-gold/35" />
             <div className="relative flex h-full w-full items-center justify-center">
-              <Logo
-                size={320}
-                priority
-                className="drop-shadow-[0_30px_80px_rgba(200,16,46,0.25)]"
-              />
+              <Logo size={320} priority className="h-full w-full ring-2 ring-gold/70 shadow-[0_0_80px_rgba(175,146,86,0.25)]" />
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <div className="text-[10px] uppercase tracking-[0.25em] text-white/40">
-        {label}
-      </div>
-      <div className="mt-2 font-display text-lg font-semibold text-white">
-        {value}
-      </div>
-    </div>
   );
 }
