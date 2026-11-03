@@ -6,7 +6,7 @@ export function Pillars() {
       <div className="container-x">
         <p className="eyebrow">Os pilares</p>
         <h2 className="mt-5 max-w-2xl font-display text-3xl font-extrabold uppercase leading-[1.05] tracking-tight sm:text-5xl">
-          Quatro princípios. <span className="text-gold-light">Todo dia.</span>
+          Quatro pilares. <span className="text-gold-light">Todo dia.</span>
         </h2>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
